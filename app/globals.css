@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gold: #f8bf27;
+  --navy: #0f172a;
+  --cream: #fefce8;
+  --forest: #14532d;
+}
+
+body {
+  @apply bg-scholarship-cream text-scholarship-navy antialiased;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
