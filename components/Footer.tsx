@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import Image from "next/image";
 import Link from "next/link";
 
 function IconHouse() {
@@ -36,9 +37,10 @@ export default function Footer() {
     >
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid gap-10 md:grid-cols-3 md:gap-8">
-          <div>
-            <p className="text-lg font-semibold text-white">American Study</p>
-            <p className="mt-1 text-sm">Great Teachers, Great Schools.</p>
+          <div className="flex flex-col items-center justify-center">
+            <div className="h-[100px] w-full bg-transparent justify-center items-center flex relative">
+              <Image src="/logo.webp" alt="American Study Logo" fill objectFit="cover" objectPosition="center" />
+            </div>
             <p className="mt-3 text-sm">Công ty cổ phần giáo dục American Study</p>
           </div>
           <div className="space-y-3">

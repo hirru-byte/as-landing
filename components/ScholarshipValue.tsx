@@ -63,18 +63,21 @@ export default function ScholarshipValue() {
             >
 
               <div className="flex flex-1 flex-col justify-between p-6 relative">
-                <div className="absolute top-0 -translate-x-6 -translate-y-6 text-lg font-semibold text-scholarship-navy/80 bg-scholarship-gold px-2 py-1">{item.price}</div>
+                <div className="absolute bottom-0 right-0 translate-x-2 translate-y-1/2 text-lg font-semibold text-scholarship-navy/80 bg-scholarship-gold px-2 py-1">{item.price}</div>
                 <div>
                   <h3 className="font-display text-base font-bold text-scholarship-navy ">
                     {item.title}
                   </h3>
                   <motion.div initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 0.7 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="my-3 h-0.5 w-full origin-left bg-scholarship-navy" aria-hidden />
                 </div>
-                <div className="flex-1 text-sm leading-relaxed break-word text-scholarship-navy/80 ">
-                  {item.description.map((description, index) => (
-                    <p key={index}>{description}</p>
+                <ul className="mt-3 flex-1 space-y-1.5 text-sm leading-relaxed text-scholarship-navy/80">
+                  {item.description.map((point, index) => (
+                    <li key={index} className="flex gap-2">
+                      <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-scholarship-gold" aria-hidden />
+                      <span>{point}</span>
+                    </li>
                   ))}
-                </div>
+                </ul>
 
               </div>
             </motion.article>
@@ -85,7 +88,7 @@ export default function ScholarshipValue() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
-          className="text-center font-display text-lg font-semibold text-scholarship-navy sm:text-xl"
+          className="text-center font-display text-lg font-semibold text-scholarship-navy sm:text-xl mt-6"
         >
           Sau bài thi, học sinh sẽ nhận báo cáo điểm chi tiết và tư vấn lộ trình học phù hợp.
         </motion.h2>

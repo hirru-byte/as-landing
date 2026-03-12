@@ -10,24 +10,28 @@ import CTABanner from "@/components/CTABanner";
 import RegisterSection from "@/components/RegisterSection";
 import Footer from "@/components/Footer";
 import Divider from "@/components/Divider";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <>
-      <main>
+    <div className="relative">
+      <div className="inset-0 z-0 fixed top-0">
+        <Image src="/bg-main.webp" alt="Background Pattern" fill objectFit="cover" objectPosition="center" />
+      </div>
+      <main className="relative z-10">
         <Hero />
         {/* <ScholarshipValue /> */}
-        <ProgramIntro />
-        <Divider width={70} />
+        {/* <ProgramIntro /> */}
+
         <Roadmap />
 
-        <EnglishSupport />
+        {/* <EnglishSupport /> */}
         <WhyPrepareEarly />
-        <TeachersSection />
+        {/* <TeachersSection /> */}
         <CTABanner />
         <RegisterSection />
         <Footer />
       </main>
-    </>
+    </div>
   );
 }

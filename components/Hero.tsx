@@ -8,7 +8,7 @@ import ScholarshipValue from "./ScholarshipValue";
 export default function Hero() {
   return (
     <section className="relative pt-24 pb-20 md:pt-28 flex flex-col items-center justify-center gap-24">
-      <Image src="/hero.webp" alt="Hero Background" objectFit="cover" objectPosition="right" fill className="absolute lg:translate-x-2 inset-0 z-10" />
+      <Image src="/hero.webp" alt="Hero Background" objectFit="cover" objectPosition="right" fill className="absolute inset-0 z-10" />
       <div className="absolute inset-0 bg-gradient-to-t from-white from-10% to-white/50 to-70% z-20" />
 
       <div className="flex flex-col items-center justify-center text-center px-6 z-30">
@@ -43,7 +43,7 @@ export default function Hero() {
         <div className="flex-1">
           <ScholarshipValue />
         </div>
-        <div className="max-w-2xl self-center md:self-start sticky top-20">
+        <div className="self-center sticky top-20">
           <ScholarshipForm />
         </div>
       </div>

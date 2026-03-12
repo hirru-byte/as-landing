@@ -1,14 +1,13 @@
 "use client";
 
 import { motion } from "motion/react";
-import Image from "next/image";
-import bgPattern from "@/public/bg-pattern.svg";
+import Divider from "./Divider";
 
 const points = [
-  <>Sử dụng rộng rãi trong xét tuyển đại học tại <strong>Hoa Kỳ và nhiều quốc gia trên thế giới</strong></>,
-  <>Được nhiều <strong>trường đại học top tại Việt Nam</strong> sử dụng trong phương thức xét tuyển</>,
-  <>Là lợi thế lớn khi săn <strong>học bổng quốc tế</strong></>,
-  <>Giúp học sinh chuẩn bị hồ sơ đại học từ sớm</>,
+  "Xét tuyển đại học tại Mỹ và nhiều quốc gia",
+  "Tăng lợi thế vào các trường đại học top tại Việt Nam",
+  "Gia tăng cơ hội săn học bổng quốc tế",
+  "Chuẩn bị hồ sơ đại học từ sớm",
 ];
 
 function CheckIcon() {
@@ -21,64 +20,70 @@ function CheckIcon() {
 
 export default function WhyPrepareEarly() {
   return (
-    <section className=" py-14 md:py-16 relative">
-      {/* <Image src={bgPattern} alt="Why Prepare Early" objectFit="cover" objectPosition="center" fill className="absolute  inset-0 z-10" /> */}
-      <div className="mx-auto max-w-xl px-6 text-center relative z-20">
-        <motion.h2
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
-          className="font-display text-2xl font-bold uppercase leading-tight tracking-tight text-scholarship-navy sm:text-3xl"
-        >
-          Vì sao học sinh nên chuẩn bị SAT từ sớm?
-        </motion.h2>
+    <section className="bg-white py-14 md:py-16">
 
-        <motion.p
-          initial={{ opacity: 0, y: 8 }}
-          whileInView={{ opacity: 1, y: 0 }}
+      <div className="mx-auto px-6 flex flex-col justify-center items-center max-lg:gap-12">
+        <motion.div
+          initial={{ boxShadow: "-5px -5px 0 0 rgba(248, 191, 39, 0.5)" }}
+          whileInView={{ boxShadow: "-19px -20px 0 0 rgba(248, 191, 39, 0.5)" }}
           viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.05 }}
-          className="mt-6 text-scholarship-navy/90"
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="bg-scholarship-gold px-12 py-6 max-w-lg text-center lg:translate-x-[-50%] relative z-10"
         >
-          Trong xu hướng hội nhập giáo dục toàn cầu, SAT đã trở thành một trong những chứng chỉ học thuật quan trọng nhất đối với học sinh THPT.
-        </motion.p>
+          <motion.h2
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4 }}
+            className="font-display text-2xl font-bold uppercase leading-tight tracking-tight text-scholarship-navy sm:text-3xl"
+          >
+            Vì sao nên chuẩn bị SAT từ sớm
+          </motion.h2>
 
-        <motion.p
-          initial={{ opacity: 0, y: 8 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          <motion.p
+            initial={{ opacity: 0, y: 8 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.05 }}
+            className="mt-6 text-scholarship-navy/90"
+          >
+            SAT đang trở thành một trong những tiêu chí quan trọng trong xét tuyển đại học.
+          </motion.p>
+        </motion.div>
+
+        <motion.div
+          initial={{ boxShadow: "5px 5px 0 0 rgba(15, 23, 42, 0.5)" }}
+          whileInView={{ boxShadow: "19px 20px 0 0 rgba(15, 23, 42, 0.5)" }}
           viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.08 }}
-          className="mt-6 font-medium text-scholarship-navy"
+          transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+          className="w-fit p-6 bg-scholarship-navy max-w-lg text-center lg:translate-y-[-20%] lg:translate-x-[40%] relative z-0"
         >
-          Điểm SAT hiện được:
-        </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 8 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.08 }}
+            className=" text-white"
+          >
+            Điểm SAT giúp học sinh:
+          </motion.p>
 
-        <ul className="mt-4 space-y-3 text-left">
-          {points.map((item, i) => (
-            <motion.li
-              key={i}
-              initial={{ opacity: 0, x: -8 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: 0.1 + i * 0.05 }}
-              className="flex items-start gap-2 text-scholarship-navy/90"
-            >
-              <CheckIcon />
-              <span>{item}</span>
-            </motion.li>
-          ))}
-        </ul>
-
-        <motion.p
-          initial={{ opacity: 0, y: 8 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.25 }}
-          className="mt-8 text-scholarship-navy/90"
-        >
-          Một điểm SAT tốt không chỉ là điểm số, mà là tấm vé mở ra nhiều cơ hội học tập toàn cầu.
-        </motion.p>
+          <ul className="mt-4 space-y-3">
+            {points.map((item, i) => (
+              <motion.li
+                key={i}
+                initial={{ opacity: 0, x: -8 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: 0.1 + i * 0.05 }}
+                className="flex gap-2 text-white"
+              >
+                <CheckIcon />
+                <span>{item}</span>
+              </motion.li>
+            ))}
+          </ul>
+        </motion.div>
       </div>
     </section>
   );

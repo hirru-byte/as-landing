@@ -10,7 +10,7 @@
 }
 
 body {
-  @apply bg-scholarship-cream text-scholarship-navy antialiased;
+  @apply text-scholarship-navy antialiased;
 }
 
 @layer utilities {

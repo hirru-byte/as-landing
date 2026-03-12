@@ -13,7 +13,7 @@ const Divider = ({ width = 70 }: DividerProps) => {
       viewport={{ once: true }}
       transition={{ duration: 1 }}
       className="flex justify-center items-center bg-white">
-      <div className={`h-1 w-full bg-scholarship-navy w-full`} />
+      <div className={`h-1 w-full bg-scholarship-navy`} />
     </motion.div>
   );
 };

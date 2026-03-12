@@ -20,8 +20,13 @@ function CheckIcon() {
 export default function RegisterSection() {
   return (
     <section className="border-t border-scholarship-gold/20 bg-white py-16 md:py-20">
-      <div className="flex flex-col lg:flex-row items-center justify-center px-6 gap-12">
-        <div>
+      <div className="flex flex-col lg:flex-row items-center justify-center px-6 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, x: 200 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 1 }}
+          className="bg-scholarship-gold/20 px-12 py-6">
           <motion.h2
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -69,10 +74,10 @@ export default function RegisterSection() {
           </motion.p>
 
 
-        </div>
+        </motion.div>
 
         {/* Form at bottom of section */}
-        <div className="mt-14">
+        <div className="mt-14 relative z-20">
           <ScholarshipForm />
         </div>
       </div>

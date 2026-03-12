@@ -46,10 +46,10 @@ export default function ScholarshipForm() {
   return (
     <motion.div
       id="form"
-      initial={{ opacity: 0, x: 24 }}
-      animate={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{ duration: 0.5, delay: 0.2 }}
-      className="border-2 border-scholarship-gold/20 bg-white p-6 shadow-[19px_20px_0px_0px_#f8bf27] sm:p-8"
+      className="border-2 border-scholarship-gold/20 bg-white p-6 shadow-[19px_20px_0px_0px_#f8bf2790] hover:shadow-[22px_20px_0px_0px_#f8bf27] transition-all duration-300 sm:p-8"
     >
       <h3 className="font-display text-xl font-semibold text-scholarship-navy">
         Đăng ký thi đánh giá năng lực SAT
