@@ -2,18 +2,18 @@
 import { motion } from "motion/react";
 
 interface DividerProps {
-  width?: string;
+  width?: number;
 }
 
-const Divider = ({ width = "w-[70%]" }: DividerProps) => {
+const Divider = ({ width = 70 }: DividerProps) => {
   return (
     <motion.div
-      whileInView={{ opacity: 1, scaleX: 1 }}
+      whileInView={{ opacity: 1, scaleX: width / 100 }}
       initial={{ opacity: 0, scaleX: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
       className="flex justify-center items-center bg-white">
-      <div className={`h-1 w-full bg-scholarship-navy ${width}`} />
+      <div className={`h-1 w-full bg-scholarship-navy w-full`} />
     </motion.div>
   );
 };

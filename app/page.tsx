@@ -16,9 +16,9 @@ export default function Home() {
     <>
       <main>
         <Hero />
-        <ScholarshipValue />
+        {/* <ScholarshipValue /> */}
         <ProgramIntro />
-        <Divider />
+        <Divider width={70} />
         <Roadmap />
 
         <EnglishSupport />

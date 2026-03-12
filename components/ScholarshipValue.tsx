@@ -7,27 +7,31 @@ const items: {
   title: string;
   description: string[];
   imageSrc?: string;
+  price: string;
   buttonText: string;
   buttonHref: string;
 }[] = [
     {
       title: "Khóa học SAT 20 buổi",
+      price: "15.000.000 VNĐ",
       description:
-        ["Giá trị 15.000.000 VNĐ.", "Xây dựng nền tảng Digital SAT, làm quen cấu trúc đề thi thật, học chiến thuật làm bài và luyện kỹ năng tăng tốc. Mục tiêu tăng 150 – 400 điểm."],
+        ["Xây dựng nền tảng Digital SAT", "Làm quen cấu trúc đề thi thật", "Học chiến thuật làm bài SAT", "Tăng tốc độ và độ chính xác khi làm bài", "Mục tiêu tăng 150 – 400 điểm"],
       buttonText: "Tìm hiểu thêm",
       buttonHref: "#form",
     },
     {
       title: "Nền tảng luyện Digital SAT",
+      price: "5.000.000 VNĐ",
       description:
-        ["Giá trị 5.000.000 VNĐ.", "Tài khoản luyện SAT với 500+ đề, thi thử mô phỏng, phân tích lỗi chi tiết, báo cáo năng lực và AI hỗ trợ giải thích. Luyện mỗi ngày ngay trên nền tảng."],
+        ["Tài khoản luyện SAT với 500+ đề", "Thi thử mô phỏng SAT thật", "Phân tích lỗi chi tiết", "Báo cáo năng lực cá nhân", "AI hỗ trợ giải thích câu hỏi"],
       buttonText: "Khám phá nền tảng",
       buttonHref: "#form",
     },
     {
       title: "Thi thử SAT chuẩn Digital",
+      price: "2.000.000 VNĐ",
       description:
-        ["Giá trị 2.000.000 VNĐ.", "Biết điểm hiện tại, kỹ năng đang yếu và cần tăng bao nhiêu điểm. Sau bài thi nhận phân tích chi tiết và định hướng lộ trình. Tổng giá trị học bổng 22.000.000 VNĐ."],
+        ["Biết điểm SAT hiện tại", "Biết kỹ năng đang yếu", "Biết cần tăng bao nhiêu điểm"],
       buttonText: "Đăng ký thi thử",
       buttonHref: "#form",
     },
@@ -35,8 +39,8 @@ const items: {
 
 export default function ScholarshipValue() {
   return (
-    <section className="relative py-16 md:py-20 bg-white">
-      <div className="mx-auto max-w-6xl px-6 relative z-10">
+    <section className="relative ">
+      <div className="mx-auto px-6 flex flex-col gap-4 relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -44,39 +48,47 @@ export default function ScholarshipValue() {
           transition={{ duration: 0.4 }}
           className="text-center font-display text-2xl font-bold text-scholarship-navy sm:text-3xl"
         >
-          Giá trị học bổng học sinh nhận được
+          GIÁ TRỊ CHƯƠNG TRÌNH HỌC SINH NHẬN ĐƯỢC
         </motion.h2>
-        <div className="mt-10 grid gap-8 sm:grid-cols-3">
+        <div className="mt-6 grid gap-4 xl:grid-cols-3">
           {items.map((item, i) => (
             <motion.article
               key={item.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20, shadow: "0px 0px 0px 0px #f8bf27" }}
+              whileInView={{ opacity: 1, y: 0, shadow: "19px 20px 0px 0px #f8bf27" }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.08 * i }}
-              className="flex flex-col bg-white shadow-lg"
+              transition={{ duration: 0.7, delay: 0.2 * i }}
+
+              className="flex flex-col bg-white"
             >
 
-              <div className="flex flex-1 flex-col p-6">
-                <h3 className="font-display text-lg font-bold text-scholarship-navy sm:text-xl">
-                  {item.title}
-                </h3>
-                <div className="my-3 h-0.5 w-12 bg-scholarship-navy" aria-hidden />
-                <div className="flex-1 text-sm leading-relaxed text-scholarship-navy/80">
+              <div className="flex flex-1 flex-col justify-between p-6 relative">
+                <div className="absolute top-0 -translate-x-6 -translate-y-6 text-lg font-semibold text-scholarship-navy/80 bg-scholarship-gold px-2 py-1">{item.price}</div>
+                <div>
+                  <h3 className="font-display text-base font-bold text-scholarship-navy ">
+                    {item.title}
+                  </h3>
+                  <motion.div initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 0.7 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="my-3 h-0.5 w-full origin-left bg-scholarship-navy" aria-hidden />
+                </div>
+                <div className="flex-1 text-sm leading-relaxed break-word text-scholarship-navy/80 ">
                   {item.description.map((description, index) => (
                     <p key={index}>{description}</p>
                   ))}
                 </div>
-                <Link
-                  href={item.buttonHref}
-                  className="mt-5 inline-block self-start bg-scholarship-navy px-5 py-2.5 text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-scholarship-navy/90"
-                >
-                  {item.buttonText}
-                </Link>
+
               </div>
             </motion.article>
           ))}
         </div>
+        <motion.h2
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4 }}
+          className="text-center font-display text-lg font-semibold text-scholarship-navy sm:text-xl"
+        >
+          Sau bài thi, học sinh sẽ nhận báo cáo điểm chi tiết và tư vấn lộ trình học phù hợp.
+        </motion.h2>
       </div>
     </section>
   );
