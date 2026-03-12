@@ -9,6 +9,7 @@ import WhyPrepareEarly from "@/components/WhyPrepareEarly";
 import CTABanner from "@/components/CTABanner";
 import RegisterSection from "@/components/RegisterSection";
 import Footer from "@/components/Footer";
+import Divider from "@/components/Divider";
 
 export default function Home() {
   return (
@@ -17,10 +18,12 @@ export default function Home() {
         <Hero />
         <ScholarshipValue />
         <ProgramIntro />
+        <Divider />
         <Roadmap />
-        <TeachersSection />
+
         <EnglishSupport />
         <WhyPrepareEarly />
+        <TeachersSection />
         <CTABanner />
         <RegisterSection />
         <Footer />

@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "motion/react";
+import Image from "next/image";
+import bgPattern from "@/public/bg-pattern.svg";
 
 const points = [
   <>Sử dụng rộng rãi trong xét tuyển đại học tại <strong>Hoa Kỳ và nhiều quốc gia trên thế giới</strong></>,
@@ -19,8 +21,9 @@ function CheckIcon() {
 
 export default function WhyPrepareEarly() {
   return (
-    <section className="border-t border-scholarship-gold/20 bg-scholarship-cream/40 py-14 md:py-16">
-      <div className="mx-auto max-w-xl px-6 text-center">
+    <section className=" py-14 md:py-16 relative">
+      {/* <Image src={bgPattern} alt="Why Prepare Early" objectFit="cover" objectPosition="center" fill className="absolute  inset-0 z-10" /> */}
+      <div className="mx-auto max-w-xl px-6 text-center relative z-20">
         <motion.h2
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}

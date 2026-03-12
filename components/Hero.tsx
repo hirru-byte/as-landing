@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import ScholarshipForm from "./ScholarshipForm";
+import Image from "next/image";
 
 const benefits = [
   {
@@ -32,12 +33,11 @@ const benefits = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden pt-24 pb-20 md:pt-28 flex items-center justify-center">
-      <div className="absolute inset-0 bg-gradient-to-br from-scholarship-cream via-white to-amber-50/30" />
-      <div className="absolute right-0 top-1/4 h-96 w-96 rounded-full bg-scholarship-gold/10 blur-3xl" />
-      <div className="absolute bottom-1/4 left-0 h-64 w-64 rounded-full bg-scholarship-forest/10 blur-3xl" />
+    <section className="relative overflow-hidden pt-24 pb-20 md:pt-28 flex items-center justify-center">
+      <Image src="/hero.webp" alt="Hero Background" objectFit="cover" objectPosition="right" fill className="absolute lg:translate-x-1/4 inset-0 z-10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-amber-500 from-20% to-white/30 to-70% z-20" />
 
-      <div className="relative mx-auto flex lg:flex-row flex-col items-center justify-center gap-12 max-w-7xl px-6">
+      <div className="relative mx-auto flex lg:flex-row flex-col items-center justify-center gap-12 max-w-7xl px-6 z-30">
         <div className="flex-1">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -59,7 +59,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="mt-6 text-base leading-relaxed text-scholarship-navy/85"
+            className="mt-6 text-lg leading-relaxed text-scholarship-navy/85 font-medium"
           >
             Cơ hội giúp học sinh tiếp cận kỳ thi Digital SAT bài bản từ sớm, xây dựng hồ sơ đại học quốc tế và mở rộng cơ hội xét tuyển tại nhiều trường đại học trong và ngoài nước.
           </motion.p>
@@ -71,7 +71,7 @@ export default function Hero() {
                 initial={{ opacity: 0, x: -12 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: 0.15 + i * 0.08 }}
-                className="flex items-start gap-3"
+                className="flex items-start gap-3 text-lg font-medium"
               >
                 <span className="mt-0.5">{item.icon}</span>
                 <span className="text-scholarship-navy/90">{item.text}</span>

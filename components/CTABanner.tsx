@@ -36,9 +36,9 @@ export default function CTABanner() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 0.08 * i }}
-              className="flex flex-col items-center rounded-xl border border-scholarship-gold/30 bg-white/5 px-6 py-6 text-center backdrop-blur-sm"
+              className="flex flex-col items-center border border-scholarship-gold/30 bg-white/5 px-6 py-6 text-center backdrop-blur-sm"
             >
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-scholarship-gold font-display text-lg font-bold text-scholarship-navy">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center bg-scholarship-gold font-display text-lg font-bold text-scholarship-navy">
                 {i + 1}
               </span>
               <p className="mt-3 font-semibold uppercase tracking-wide text-white">
@@ -57,7 +57,7 @@ export default function CTABanner() {
         >
           <Link
             href="#form"
-            className="inline-block rounded-xl bg-scholarship-gold px-8 py-4 font-semibold uppercase tracking-wide text-scholarship-navy transition hover:bg-scholarship-gold/90"
+            className="inline-block bg-scholarship-gold px-8 py-4 font-semibold uppercase tracking-wide text-scholarship-navy transition hover:bg-scholarship-gold/90"
           >
             Đăng ký ngay
           </Link>

@@ -116,19 +116,19 @@ export default function TeachersSection() {
               key={t.id}
               type="button"
               onClick={() => setSelectedIndex(i)}
-              className={`relative flex min-w-0 flex-1 flex-col overflow-hidden rounded-xl ${selectedIndex === i ? "flex-[2.5]" : "flex-1"
+              className={`relative flex min-w-0 flex-1 flex-col overflow-hidden ${selectedIndex === i ? "flex-[2.5]" : "flex-1"
                 }`}
               aria-pressed={selectedIndex === i}
               aria-label={`Xem thông tin ${t.name}`}
             >
               {selectedIndex === i ? (
                 <div
-                  className={`flex h-full min-h-[320px] flex-col rounded-xl ${t.bgColor} p-5`}
+                  className={`flex h-full min-h-[320px] flex-col ${t.bgColor} p-5`}
                 >
                   <div className="flex flex-1 gap-4">
                     <div className="flex flex-1 items-center justify-center">
                       <div
-                        className={`h-32 w-32 rounded-full ${t.accentColor} flex items-center justify-center text-3xl font-bold text-white`}
+                        className={`h-32 w-32 ${t.accentColor} flex items-center justify-center text-3xl font-bold text-white`}
                         aria-hidden
                       >
                         {t.name.charAt(0)}
@@ -142,7 +142,7 @@ export default function TeachersSection() {
                       <ul className="mt-3 space-y-1.5 text-sm text-scholarship-navy/90">
                         {t.bullets.map((b, j) => (
                           <li key={j} className="flex gap-2">
-                            <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-scholarship-gold" />
+                            <span className="mt-1.5 h-1 w-1 shrink-0 bg-scholarship-gold" />
                             {b}
                           </li>
                         ))}
@@ -153,10 +153,10 @@ export default function TeachersSection() {
                 </div>
               ) : (
                 <div
-                  className={`flex h-full min-h-[240px] items-center justify-center rounded-xl ${t.bgColor} p-4`}
+                  className={`flex h-full min-h-[240px] items-center justify-center ${t.bgColor} p-4`}
                 >
                   <div
-                    className={`h-20 w-20 rounded-full ${t.accentColor} flex items-center justify-center text-2xl font-bold text-white`}
+                    className={`h-20 w-20 ${t.accentColor} flex items-center justify-center text-2xl font-bold text-white`}
                     aria-hidden
                   >
                     {t.name.charAt(0)}
@@ -176,11 +176,11 @@ export default function TeachersSection() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -16 }}
               transition={{ duration: 0.2, ease: "easeInOut" }}
-              className={`rounded-xl ${teacher.bgColor} p-6`}
+              className={`${teacher.bgColor} p-6`}
             >
               <div className="flex flex-col items-center text-center">
                 <div
-                  className={`h-24 w-24 rounded-full ${teacher.accentColor} flex items-center justify-center text-3xl font-bold text-white`}
+                  className={`h-24 w-24 ${teacher.accentColor} flex items-center justify-center text-3xl font-bold text-white`}
                   aria-hidden
                 >
                   {teacher.name.charAt(0)}
@@ -194,14 +194,14 @@ export default function TeachersSection() {
                 <ul className="mt-4 w-full space-y-2 text-left text-sm text-scholarship-navy/90">
                   {teacher.bullets.map((b, j) => (
                     <li key={j} className="flex gap-2">
-                      <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-scholarship-gold" />
+                      <span className="mt-1.5 h-1 w-1 shrink-0 bg-scholarship-gold" />
                       {b}
                     </li>
                   ))}
                 </ul>
                 <a
                   href="#form"
-                  className="mt-6 inline-block rounded-lg bg-amber-500 px-6 py-3 font-semibold uppercase text-white transition hover:bg-amber-600"
+                  className="mt-6 inline-block bg-amber-500 px-6 py-3 font-semibold uppercase text-white transition hover:bg-amber-600"
                 >
                   Kết nối
                 </a>
@@ -214,7 +214,7 @@ export default function TeachersSection() {
             <button
               type="button"
               onClick={() => goTo(selectedIndex - 1)}
-              className="rounded-full p-2 text-scholarship-navy/70 transition hover:bg-scholarship-navy/10 hover:text-scholarship-navy"
+              className="p-2 text-scholarship-navy/70 transition hover:bg-scholarship-navy/10 hover:text-scholarship-navy"
               aria-label="Giảng viên trước"
             >
               <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -227,7 +227,7 @@ export default function TeachersSection() {
                   key={i}
                   type="button"
                   onClick={() => setSelectedIndex(i)}
-                  className={`h-2.5 w-2.5 rounded-full transition-all ${i === selectedIndex ? "bg-scholarship-gold scale-125" : "bg-scholarship-navy/30"
+                  className={`h-2.5 w-2.5 transition-all ${i === selectedIndex ? "bg-scholarship-gold scale-125" : "bg-scholarship-navy/30"
                     }`}
                   aria-label={`Giảng viên ${i + 1}`}
                   aria-current={i === selectedIndex}
@@ -237,7 +237,7 @@ export default function TeachersSection() {
             <button
               type="button"
               onClick={() => goTo(selectedIndex + 1)}
-              className="rounded-full p-2 text-scholarship-navy/70 transition hover:bg-scholarship-navy/10 hover:text-scholarship-navy"
+              className="p-2 text-scholarship-navy/70 transition hover:bg-scholarship-navy/10 hover:text-scholarship-navy"
               aria-label="Giảng viên tiếp theo"
             >
               <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -254,7 +254,7 @@ export default function TeachersSection() {
               key={i}
               type="button"
               onClick={() => setSelectedIndex(i)}
-              className={`h-2 w-2 rounded-full transition-all ${i === selectedIndex ? "bg-scholarship-gold scale-125" : "bg-scholarship-navy/30"
+              className={`h-2 w-2 transition-all ${i === selectedIndex ? "bg-scholarship-gold scale-125" : "bg-scholarship-navy/30"
                 }`}
               aria-label={`Chọn giảng viên ${i + 1}`}
               aria-current={i === selectedIndex}

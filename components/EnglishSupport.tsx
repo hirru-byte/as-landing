@@ -18,7 +18,7 @@ function CheckIcon() {
 
 export default function EnglishSupport() {
   return (
-    <section className="border-t border-scholarship-gold/20 bg-white py-14 md:py-16">
+    <section className=" bg-white py-14 md:py-16">
       <div className="mx-auto max-w-xl px-6">
         <motion.h2
           initial={{ opacity: 0, y: 12 }}

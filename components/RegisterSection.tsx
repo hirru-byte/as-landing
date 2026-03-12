@@ -20,67 +20,56 @@ function CheckIcon() {
 export default function RegisterSection() {
   return (
     <section className="border-t border-scholarship-gold/20 bg-white py-16 md:py-20">
-      <div className="mx-auto max-w-2xl px-6">
-        <motion.h2
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
-          className="text-center font-display text-2xl font-bold uppercase tracking-tight text-scholarship-navy sm:text-3xl"
-        >
-          Đăng ký tham gia chương trình
-        </motion.h2>
-
-        <motion.p
-          initial={{ opacity: 0, y: 8 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.05 }}
-          className="mt-6 text-scholarship-navy/90"
-        >
-          Học sinh đăng ký để:
-        </motion.p>
-
-        <ul className="mt-3 space-y-2">
-          {benefits.map((item, i) => (
-            <motion.li
-              key={i}
-              initial={{ opacity: 0, x: -8 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: 0.08 + i * 0.05 }}
-              className="flex items-center gap-2 text-scholarship-navy/90"
-            >
-              <CheckIcon />
-              <span>{item}</span>
-            </motion.li>
-          ))}
-        </ul>
-
-        <motion.p
-          initial={{ opacity: 0, y: 8 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.2 }}
-          className="mt-6 font-semibold text-scholarship-navy"
-        >
-          Số lượng học bổng có hạn
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.22 }}
-          className="mt-6"
-        >
-          <a
-            href="#form"
-            className="inline-block rounded-lg border-2 border-scholarship-navy bg-scholarship-navy px-6 py-3.5 font-semibold uppercase tracking-wide text-white transition hover:bg-scholarship-navy/90"
+      <div className="flex flex-col lg:flex-row items-center justify-center px-6 gap-12">
+        <div>
+          <motion.h2
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4 }}
+            className="text-center font-display text-2xl font-bold uppercase tracking-tight text-scholarship-navy sm:text-3xl"
           >
-            [ Đăng ký ngay ]
-          </a>
-        </motion.div>
+            Đăng ký tham gia chương trình
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 8 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.05 }}
+            className="mt-6 text-scholarship-navy/90"
+          >
+            Học sinh đăng ký để:
+          </motion.p>
+
+          <ul className="mt-3 space-y-2">
+            {benefits.map((item, i) => (
+              <motion.li
+                key={i}
+                initial={{ opacity: 0, x: -8 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: 0.08 + i * 0.05 }}
+                className="flex items-center gap-2 text-scholarship-navy/90"
+              >
+                <CheckIcon />
+                <span>{item}</span>
+              </motion.li>
+            ))}
+          </ul>
+
+          <motion.p
+            initial={{ opacity: 0, y: 8 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.2 }}
+            className="mt-6 font-semibold text-scholarship-navy"
+          >
+            Số lượng học bổng có hạn
+          </motion.p>
+
+
+        </div>
 
         {/* Form at bottom of section */}
         <div className="mt-14">
