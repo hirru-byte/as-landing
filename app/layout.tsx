@@ -9,9 +9,9 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Scholarship Program | Invest in Your Future",
+  title: "CHƯƠNG TRÌNH HỖ TRỢ NĂNG LỰC SAT TOÀN PHẦN NĂM 2026",
   description:
-    "Apply for our scholarship and take the next step in your education. Financial support for deserving students.",
+    "Học sinh đăng ký tham gia thi thử Digital SAT sẽ có cơ hội nhận khóa học SAT miễn phí và tài khoản luyện thi tại American Study.",
 };
 
 export default function RootLayout({

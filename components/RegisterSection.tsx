@@ -25,7 +25,7 @@ export default function RegisterSection() {
           initial={{ opacity: 0, x: 200 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 1, delay: 1 }}
+          transition={{ duration: 1, delay: 0.4 }}
           className="bg-scholarship-gold/20 px-12 py-6">
           <motion.h2
             initial={{ opacity: 0, y: 12 }}
@@ -70,7 +70,7 @@ export default function RegisterSection() {
             transition={{ duration: 0.4, delay: 0.2 }}
             className="mt-6 font-semibold text-scholarship-navy"
           >
-            Số lượng học bổng có hạn
+            Số lượng có hạn
           </motion.p>
 
 
