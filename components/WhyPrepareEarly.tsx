@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "motion/react";
-import Divider from "./Divider";
 
 const points = [
   "Xét tuyển đại học tại Mỹ và nhiều quốc gia",
