@@ -11,8 +11,8 @@ type CardItem =
 const cards: CardItem[] = [
   { number: 1000, suffix: "+", content: "học sinh đạt SAT 1500+ mỗi năm" },
   { number: 5000, suffix: "+", content: "học sinh đã tham gia chương trình SAT" },
-  { number: 1000, suffix: "+", content: "Kho đề luyện Digital SAT lớn với hàng trăm đề cập nhật liên tục" },
-  { number: 500, suffix: "+", content: "Thi thử mô phỏng kỳ thi SAT thật" },
+  { number: 200, suffix: "+", content: "Kho đề luyện Digital SAT lớn với hàng trăm đề cập nhật liên tục" },
+  { number: 150, suffix: "+", content: "Thi thử mô phỏng kỳ thi SAT thật" },
 ];
 
 function hasNumber(
